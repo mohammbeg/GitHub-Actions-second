@@ -1,7 +1,7 @@
 # workflow
 name: NodeJs project
-# trigger/ event
-on: push
+# trigger/ event if you want to add multiple triggers you can add them like this. workflow_dispatch allows us to manually run jobs from the github UI
+on: [push, workflow_dispatch]
 jobs:
   nodetest:
     runs-on: ubuntu-latest
