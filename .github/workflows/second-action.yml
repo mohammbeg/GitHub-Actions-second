@@ -10,9 +10,16 @@ jobs:
     #   Actions works with different keys. in this case we checkout our repo so i workflow can use our repo to run. So we add the "uses" key for the nuild in action
         uses: actions/checkout@v3
     #   You can add a "with" key if you want to checkout the repo with specific https://github.com/marketplace/actions/checkout
-      - name: Completed 
-        run: echo "Completed"
-        
+      - name: actions/setup-node@v4
+        uses: echo "Completed"
+        with: 
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test 
+      
+
 
 
 
