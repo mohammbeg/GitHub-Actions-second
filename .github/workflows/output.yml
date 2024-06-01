@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output Information
-        run: echo "${{ toJSON(github) }}"
+        run: echo "${{ toJSON(github) }}" # git hub expressions
         # Metadata - is the information that you can add to a workflow file to output like git info and what ever else in a form of json. output.yml
